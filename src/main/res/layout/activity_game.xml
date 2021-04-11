@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADFFF5"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/turnimageId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/winneId"
+        app:layout_constraintStart_toEndOf="@+id/winneId"
+        app:srcCompat="@drawable/circleonly" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="80dp"
+        android:background="#B579BC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:onClick="oneF"
+                android:paddingLeft="2.5dp"
+                android:paddingTop="2.5dp"
+                app:srcCompat="@drawable/beyaz" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:onClick="twoF"
+                android:paddingLeft="2.5dp"
+                android:paddingTop="2.5dp"
+                android:paddingRight="2.5dp"
+                app:srcCompat="@drawable/beyaz" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:onClick="threeF"
+                android:paddingTop="2.5dp"
+                android:paddingRight="2.5dp"
+                app:srcCompat="@drawable/beyaz" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:onClick="fourF"
+                android:paddingLeft="2.5dp"
+                android:paddingTop="2.5dp"
+                app:srcCompat="@drawable/beyaz" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:onClick="fiveF"
+                android:paddingLeft="2.5dp"
+                android:paddingTop="2.5dp"
+                android:paddingRight="2.5dp"
+                app:srcCompat="@drawable/beyaz" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:onClick="sixF"
+                android:paddingTop="2.5dp"
+                android:paddingRight="2.5dp"
+                app:srcCompat="@drawable/beyaz" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:onClick="sevenF"
+                android:paddingLeft="2.5dp"
+                android:paddingTop="2.5dp"
+                android:paddingBottom="2.5dp"
+                app:srcCompat="@drawable/beyaz" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:onClick="eightF"
+                android:paddingLeft="2.5dp"
+                android:paddingTop="2.5dp"
+                android:paddingRight="2.5dp"
+                android:paddingBottom="2.5dp"
+                app:srcCompat="@drawable/beyaz" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:onClick="nineF"
+                android:paddingTop="2.5dp"
+                android:paddingRight="2.5dp"
+                android:paddingBottom="2.5dp"
+                app:srcCompat="@drawable/beyaz" />
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/winneId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="40dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:srcCompat="@drawable/falseonly" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="12dp"
+        android:text="WON!"
+        android:textColor="#8E24AA"
+        android:textSize="50sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/winneId"
+        app:layout_constraintStart_toEndOf="@+id/winneId" />
+
+    <Button
+        android:id="@+id/playagainId"
+        android:layout_width="100dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:drawable/ic_media_play"
+        android:backgroundTint="#8E24AA"
+        android:onClick="againF"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <TextView
+        android:id="@+id/turnTextId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="63dp"
+        android:text="Turn:"
+        android:textColor="#8E24AA"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
